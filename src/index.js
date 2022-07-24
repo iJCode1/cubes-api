@@ -1,5 +1,5 @@
 // Importación de componentes del proyecto
-import express from 'express';
+const express = require('express');
 
 // CORS
 const cors = require('cors');

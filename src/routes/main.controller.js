@@ -1,13 +1,13 @@
 // Importación de componentes del proyecto
-const express = require(express);
+const express = require('express');
 
-const cubers = require('./cubers/index.js');
-const cubes = require('./cubes/index.js');
+const cubesRouter = require('./cubes/index.js');
+const cubersRouter = require('./cubers/index.js');
 
 // Definiendo los endpoints
 const routerApi = (app) => {
-  app.use('/cubers', cubers);
-  app.use('/cubes', cubes);
+  app.use('/cubes', cubesRouter);
+  app.use('/cubers', cubersRouter);
 }
 
 // Exportación de la función
