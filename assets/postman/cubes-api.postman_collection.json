@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "74d1abf9-564f-47e6-a603-53821e655eab",
+		"name": "cubes-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7031004"
+	},
+	"item": [
+		{
+			"name": "getAll - Cubes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cubes/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAll",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/shoes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shoes",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ef-AFDxADDmg/af1+nm/x/7wrst1/0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Jul 2022 04:49:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"brand\": \"Noke\",\n        \"price\": 299,\n        \"size\": 29\n    },\n    {\n        \"id\": 2,\n        \"brand\": \"edidas\",\n        \"price\": 1599,\n        \"size\": 27\n    },\n    {\n        \"id\": 3,\n        \"brand\": \"floxi\",\n        \"price\": 430,\n        \"size\": 25.5\n    },\n    {\n        \"id\": 4,\n        \"brand\": \"pima\",\n        \"price\": 1400,\n        \"size\": 22\n    },\n    {\n        \"id\": 5,\n        \"brand\": \"gassi\",\n        \"price\": 289,\n        \"size\": 28\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getAll with queryParams - Cubes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cubes/?category=3x3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						""
+					],
+					"query": [
+						{
+							"key": "otro",
+							"value": "\"otro contenido\"",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "3x3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne - Cubes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cubes/0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create - Cubes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 15,\n    \"brand\": \"Gan\",\n    \"category\": \"4x4\",\n    \"model\": \"460M\",\n    \"base\": \"Stickerless\",\n    \"price\": 1769\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubes/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 6,\n    \"brand\": \"Punum\",\n    \"price\": 1200,\n    \"size\": 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/shoes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shoes",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Jul 2022 04:50:11 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "partialEdit - Cubes",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\": \"3x3 Modificado\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubes/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completeEdit - Cubes",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"QiYi\",\n    \"category\": \"3x3\",\n    \"model\": \"Valk 3\",\n    \"base\": \"black\",\n    \"price\": 755\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubes/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete - Cubes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubes/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "------------------------",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cubes/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAll",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/shoes/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shoes",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ef-AFDxADDmg/af1+nm/x/7wrst1/0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Jul 2022 04:49:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"brand\": \"Noke\",\n        \"price\": 299,\n        \"size\": 29\n    },\n    {\n        \"id\": 2,\n        \"brand\": \"edidas\",\n        \"price\": 1599,\n        \"size\": 27\n    },\n    {\n        \"id\": 3,\n        \"brand\": \"floxi\",\n        \"price\": 430,\n        \"size\": 25.5\n    },\n    {\n        \"id\": 4,\n        \"brand\": \"pima\",\n        \"price\": 1400,\n        \"size\": 22\n    },\n    {\n        \"id\": 5,\n        \"brand\": \"gassi\",\n        \"price\": 289,\n        \"size\": 28\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "getAll - Cubers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cubers/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll with queryParams - Cubers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cubers/?country=USA",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubers",
+						""
+					],
+					"query": [
+						{
+							"key": "otro",
+							"value": "\"otro contenido\"",
+							"disabled": true
+						},
+						{
+							"key": "country",
+							"value": "USA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne - Cubers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cubers/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubers",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create - Cubers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 7,\n    \"name\": \"Keaton\",\n    \"lastname\": \"Ellis\",\n    \"country\": \"USA\",\n    \"age\": 23,\n    \"competitions\": \"114\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubers/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partialEdit - Cubers",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Felipe\",\n    \"age\": 17\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubers/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completeEdit - Cubers",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Maximiliano\",\n    \"lastname\": \"Parkensito\",\n    \"country\": \"México\",\n    \"age\": \"15\",\n    \"competitions\": 700\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubers/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubers",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete - Cubers",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cubers/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cubers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
