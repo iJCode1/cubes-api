@@ -20,7 +20,7 @@ const get = async(req, res) => {
 const getByCountry = async(req, res) => {
   const {country} = req.params;
   try{
-    const foundedCuber = await cubersService.findOne(country);
+    const foundedCuber = await cubersService.findAll(country);
     res.status(200).send( { message: "La Busqueda fue éxitosa!", foundedCuber } );
   }catch(error){
     res.status(404).json( { message: "El País ingresado no existe!..." } );

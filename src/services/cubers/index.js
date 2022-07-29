@@ -28,7 +28,7 @@ class CubersServices{
     return new Promise((resolve, reject) => {
       setTimeout(()=>{
         if(country){
-          const filterData = this.cubers.filter(cuber => cuber.country >= country);
+          const filterData = this.cubers.filter(cuber => cuber.country === country);
           resolve(filterData);
         }
         resolve(this.cubers);
